@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<REPOSITORIO>
+   <BASES_DE_DATOS>
+      <BASE_DATOS_SELECCIONADA>MySQL</BASE_DATOS_SELECCIONADA>
+      <BASE_DATOS nombre="Oracle">
+         <CLASS_DRIVER>oracle.jdbc.driver.OracleDriver</CLASS_DRIVER>
+         <URL_CONEXION>jdbc:oracle:thin:@localhost:1521:ORCL</URL_CONEXION>
+         <USUARIO>scott</USUARIO>
+         <PASSWORD>tiger</PASSWORD>
+      </BASE_DATOS> 
+      <BASE_DATOS nombre="MySQL">
+         <CLASS_DRIVER>com.mysql.cj.jdbc.Driver</CLASS_DRIVER>
+         <URL_CONEXION>jdbc:mysql://localhost:3306/biblioteca</URL_CONEXION>
+         <USUARIO>root</USUARIO>
+         <PASSWORD>root123</PASSWORD>
+      </BASE_DATOS>     
+   </BASES_DE_DATOS>
+   <SISTEMA_ARCHIVOS>
+        <RUTA_CREACION>D:\\PDFs_creados\\</RUTA_CREACION>
+   </SISTEMA_ARCHIVOS>
+   <OPCIONES_MENU>
+        <GRUPO_OPCIONES nombre_grupo="Conexión-Desconexión">
+             <OPCION>Conexion</OPCION>
+             <OPCION>Desconexion</OPCION>
+        </GRUPO_OPCIONES>
+        <GRUPO_OPCIONES nombre_grupo="Mantenimiento">
+             <OPCION>Vista Formulario</OPCION>
+             <OPCION>Vista Unica Tabla</OPCION>
+             <OPCION>Vista Paginada Tabla</OPCION> 
+             <OPCION>Vista Arbol</OPCION>             
+        </GRUPO_OPCIONES>
+        <GRUPO_OPCIONES nombre_grupo="Actividad">
+             <OPCION>Estadisticas Actividad</OPCION>
+             <OPCION>Volcado a BD</OPCION>
+        </GRUPO_OPCIONES>
+        <GRUPO_OPCIONES nombre_grupo="Generar documentos">
+             <OPCION>Configurar Documento</OPCION>
+        </GRUPO_OPCIONES>
+   </OPCIONES_MENU>
+   <PARAMETROS_PAGINACION>
+      <NUMERO_FILAS_PAGINA>5</NUMERO_FILAS_PAGINA>
+      <NUMERO_BOTONES_NUMERICOS>3</NUMERO_BOTONES_NUMERICOS>
+   </PARAMETROS_PAGINACION>
+   <PARAMETROS_LISTADO>
+      <NUMERO_FILAS_POR_PAGINA>10</NUMERO_FILAS_POR_PAGINA>
+   </PARAMETROS_LISTADO>
+</REPOSITORIO>
