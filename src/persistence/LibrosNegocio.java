@@ -5,7 +5,7 @@
 package persistence;
 
 import printer.LibrosPDF;
-import view.ParametrosPaginacion;
+import presentacion.ParametrosPaginacion;
 import printer.ParametrosListado;
 import printer.LibrosImpresora;
 import java.sql.Connection;

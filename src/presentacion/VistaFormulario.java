@@ -2,13 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package view;
+package presentacion;
 
 /**
  *
  * @author jtech
  */
 
+import presentacion.PantallaOpcion;
+import presentacion.Filtros;
 import controller.Controller;
 import model.Libro;
 import java.awt.Color;

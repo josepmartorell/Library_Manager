@@ -71,3 +71,20 @@
 2022-04-19 14:04:46                    127.000.001.001       0  presentacion.Conexion                                                                                         
 2022-04-19 14:19:42                    127.000.001.001       0  presentacion.Conexion                                                                                         
 2022-04-19 14:20:45                    127.000.001.001       0  presentacion.Conexion                                                                                         
+2022-04-19 16:21:55                    127.000.001.001       0  presentacion.Conexion                                                                                         
+2022-04-19 16:22:43                    127.000.001.001       0  presentacion.Conexion                                                                                         
+2022-04-19 16:25:48  usuario2          127.000.001.001      17  No puede dejar ningún dato nulo                                                                               
+2022-04-19 16:27:39  usuario2          127.000.001.001      17  No puede dejar ningún dato nulo                                                                               
+2022-04-19 16:28:24  usuario2          127.000.001.001      17  No puede dejar ningún dato nulo                                                                               
+2022-04-19 16:29:23  usuario2          127.000.001.001       0  presentacion.VistaUnicaTabla                                                                                  
+2022-04-19 16:29:39  usuario2          127.000.001.001       0  presentacion.VistaPaginadaTabla                                                                               
+2022-04-19 16:30:24                    127.000.001.001       0  presentacion.Conexion                                                                                         
+2022-04-19 16:36:21                    127.000.001.001       0  presentacion.Conexion                                                                                         
+2022-04-19 16:37:24  usuario1          127.000.001.001       0  presentacion.EstadisticasActividad                                                                            
+2022-04-19 16:38:42  usuario1          127.000.001.001       0  presentacion.VistaPaginadaTabla                                                                               
+2022-04-19 16:38:56  usuario1          127.000.001.001       0  presentacion.ConfigurarDocumento                                                                              
+2022-04-19 16:39:03  usuario1          127.000.001.001       0  presentacion.VolcadoaBD                                                                                       
+2022-04-19 16:39:09  usuario1          127.000.001.001       0  presentacion.VistaUnicaTabla                                                                                  
+2022-04-19 16:39:13  usuario1          127.000.001.001       0  presentacion.VistaPaginadaTabla                                                                               
+2022-04-19 16:39:17  usuario1          127.000.001.001       0  presentacion.VistaArbol                                                                                       
+2022-04-19 16:41:30  usuario1          127.000.001.001      17  No puede dejar ningún dato nulo                                                                               
