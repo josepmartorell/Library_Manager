@@ -5,7 +5,7 @@
 package application;
 
 import javax.swing.SwingUtilities;
-import presentacion.Menu;
+import view.Menu;
 
 /**
  *

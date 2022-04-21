@@ -88,3 +88,27 @@
 2022-04-19 16:39:13  usuario1          127.000.001.001       0  presentacion.VistaPaginadaTabla                                                                               
 2022-04-19 16:39:17  usuario1          127.000.001.001       0  presentacion.VistaArbol                                                                                       
 2022-04-19 16:41:30  usuario1          127.000.001.001      17  No puede dejar ningún dato nulo                                                                               
+2022-04-21 13:23:06  usuario1          127.000.001.001       0  presentacion.VistaUnicaTabla                                                                                  
+2022-04-21 13:31:06  usuario1          127.000.001.001       0  Not supported yet.                                                                                            
+2022-04-21 13:32:13  usuario1          127.000.001.001       0  Not supported yet.                                                                                            
+2022-04-21 13:47:03                    127.000.001.001       0  view.Conexion                                                                                                 
+2022-04-21 13:51:16  usuario1          127.000.001.001       0  Not supported yet.                                                                                            
+2022-04-21 14:01:08  usuario1          127.000.001.001       0  Not supported yet.                                                                                            
+2022-04-21 14:01:12  usuario1          127.000.001.001       0  Not supported yet.                                                                                            
+2022-04-21 14:01:15  usuario1          127.000.001.001       0  Not supported yet.                                                                                            
+2022-04-21 14:01:46  usuario1          127.000.001.001       0  Not supported yet.                                                                                            
+2022-04-21 14:09:15  usuario1          127.000.001.001       0  view.VistaPaginadaTabla                                                                                       
+2022-04-21 14:09:20  usuario1          127.000.001.001       0  view.VistaArbol                                                                                               
+2022-04-21 14:09:23  usuario1          127.000.001.001       0  view.EstadisticasActividad                                                                                    
+2022-04-21 14:09:30  usuario1          127.000.001.001       0  view.VolcadoaBD                                                                                               
+2022-04-21 14:09:37  usuario1          127.000.001.001       0  view.ConfigurarDocumento                                                                                      
+2022-04-21 14:16:11  usuario1          127.000.001.001       0  view.VistaArbol                                                                                               
+2022-04-21 16:18:13  usuario1          127.000.001.001       0  view.EstadisticasActividad                                                                                    
+2022-04-21 16:18:17  usuario1          127.000.001.001       0  view.VolcadoaBD                                                                                               
+2022-04-21 16:18:21  usuario1          127.000.001.001       0  view.ConfigurarDocumento                                                                                      
+2022-04-21 16:25:37  usuario1          127.000.001.001       0  view.EstadisticasActividad                                                                                    
+2022-04-21 16:25:41  usuario1          127.000.001.001       0  view.ConfigurarDocumento                                                                                      
+2022-04-21 16:25:48  usuario1          127.000.001.001       0  view.EstadisticasActividad                                                                                    
+2022-04-21 16:25:52  usuario1          127.000.001.001       0  view.ConfigurarDocumento                                                                                      
+2022-04-21 16:36:49  usuario1          127.000.001.001       0  null                                                                                                          
+2022-04-21 16:40:06  usuario1          127.000.001.001       0  null                                                                                                          

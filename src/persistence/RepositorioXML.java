@@ -4,7 +4,7 @@
  */
 package persistence;
 
-import presentacion.ParametrosPaginacion;
+import view.ParametrosPaginacion;
 import printer.ParametrosListado;
 import application.GenericaExcepcion;
 import java.io.IOException;
