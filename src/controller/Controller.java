@@ -41,9 +41,9 @@ import model.Contexto;
 import application.GestorIncidencias;
 import persistence.IncidenciasNegocio;
 import persistence.RepositorioNegocio;
-import presentacion.ModeloDatos;
-import presentacion.PantallaOpcion;
-import presentacion.Menu;
+import view.ModeloDatos;
+import view.PantallaOpcion;
+import view.Menu;
 
 /**
  *

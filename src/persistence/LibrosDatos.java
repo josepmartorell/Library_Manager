@@ -4,7 +4,7 @@
  */
 package persistence;
 
-import presentacion.ParametrosPaginacion;
+import view.ParametrosPaginacion;
 import application.GenericaExcepcion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

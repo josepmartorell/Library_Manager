@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package presentacion;
+package view;
 
 import controller.Controller;
 import controller.InvocacionAutomaticaMenu;
@@ -90,7 +90,7 @@ public class Menu extends JFrame{
         if (jPanelPrincipal != null)
             this.getContentPane().remove(jPanelPrincipal);
         jPanelPrincipal = new JPanel(new CardLayout());   
-        PantallaOpcion pantallaOpcion = (PantallaOpcion)Class.forName("presentacion."+  eliminarEspaciosEnBlanco(actionCommand)).newInstance();  
+        PantallaOpcion pantallaOpcion = (PantallaOpcion)Class.forName("view."+  eliminarEspaciosEnBlanco(actionCommand)).newInstance();  
         controller.setPantallaOpcion(pantallaOpcion); 
         pantallaOpcion.inicializarPostInstanciar(controller);  
         pantallaOpcion.inicializarPantalla();
