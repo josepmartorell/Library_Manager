@@ -4,7 +4,6 @@
  */
 package printer;
 
-import printer.ParametrosListado;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.List;

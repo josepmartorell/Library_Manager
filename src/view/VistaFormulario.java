@@ -9,8 +9,6 @@ package view;
  * @author jtech
  */
 
-import view.PantallaOpcion;
-import view.Filtros;
 import controller.Controller;
 import model.Libro;
 import java.awt.Color;

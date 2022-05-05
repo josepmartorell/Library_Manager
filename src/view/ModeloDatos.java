@@ -95,9 +95,9 @@ public class ModeloDatos extends AbstractTableModel {
     public void cargar(List<Libro> listaLibros) throws Exception { 
 
         switch(controller.getPantallaOpcion().getClass().getName())
-          {  case "presentacion.VistaUnicaTabla": numeroFilas = listaLibros.size();
+          {  case "view.VistaUnicaTabla": numeroFilas = listaLibros.size();
                      break;
-             case "presentacion.VistaPaginadaTabla": numeroFilas = ((ParametrosPaginacion)controller.getRepositorio()[4]).getNumeroFilasPagina(); 
+             case "view.VistaPaginadaTabla": numeroFilas = ((ParametrosPaginacion)controller.getRepositorio()[4]).getNumeroFilasPagina(); 
                      break;                     
           }      
 
@@ -170,10 +170,10 @@ public class ModeloDatos extends AbstractTableModel {
         boolean editable = false;
 
         switch(controller.getPantallaOpcion().getClass().getName())
-          {  case "presentacion.VistaUnicaTabla": if (columna >0)
+          {  case "view.VistaUnicaTabla": if (columna >0)
                                                       editable = true;
                      break;
-             case "presentacion.VistaPaginadaTabla": if (fila < numeroFilasRecibidas  &&  columna >0)
+             case "view.VistaPaginadaTabla": if (fila < numeroFilasRecibidas  &&  columna >0)
                                                          editable = true; 
                      break;                     
           } 
