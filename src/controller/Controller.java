@@ -177,8 +177,8 @@ public class Controller extends WindowAdapter implements ActionListener, TableMo
        ListSelectionModel listSelectionModel = (ListSelectionModel)e.getSource(); 
      
       switch(pantallaOpcion.getClass().getName())
-       {  case "presentacion.VistaUnicaTabla": 
-          case "presentacion.VistaPaginadaTabla": 
+       {  case "view.VistaUnicaTabla": 
+          case "view.VistaPaginadaTabla": 
                   if (!(e.getValueIsAdjusting()))
                   {
                       pantallaOpcion.setComponenteJPanel(listSelectionModel.getMinSelectionIndex(), 2);  // Modifica valor de fila seleccionada en JTable  

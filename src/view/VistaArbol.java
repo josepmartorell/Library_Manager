@@ -195,14 +195,14 @@ public class VistaArbol extends PantallaOpcion {
 
                          if ( nodoSeleccionado != null )
                          { 
-                             if (seleccionEvento.getLastPathComponent().getClass().getName().compareTo("presentacion.NodoGenero")==0 && nodoSeleccionado.getClass().getName().compareTo("presentacion.NodoGenero")==0 && nodoSeleccionado.getIdentificativo().compareTo(nodoSeleccionEvento.getIdentificativo())==0 && SwingUtilities.isRightMouseButton((MouseEvent)componentesJPanel[16]) )
+                             if (seleccionEvento.getLastPathComponent().getClass().getName().compareTo("view.NodoGenero")==0 && nodoSeleccionado.getClass().getName().compareTo("presentacion.NodoGenero")==0 && nodoSeleccionado.getIdentificativo().compareTo(nodoSeleccionEvento.getIdentificativo())==0 && SwingUtilities.isRightMouseButton((MouseEvent)componentesJPanel[16]) )
                                {
                                  nodoGeneroSeleccion = nodoSeleccionado;
                                  popupMenu1.show( (Component)componentesJPanel[15], ((Integer)componentesJPanel[13]).intValue(), ((Integer)componentesJPanel[14]).intValue() ); 
                                }
                               else
                                {
-                                 if (seleccionEvento.getLastPathComponent().getClass().getName().compareTo("presentacion.NodoLibro")==0 && nodoSeleccionado.getClass().getName().compareTo("presentacion.NodoLibro")==0 && nodoSeleccionado.getIdentificativo().compareTo(nodoSeleccionEvento.getIdentificativo())==0 && SwingUtilities.isRightMouseButton((MouseEvent)componentesJPanel[16]) )
+                                 if (seleccionEvento.getLastPathComponent().getClass().getName().compareTo("view.NodoLibro")==0 && nodoSeleccionado.getClass().getName().compareTo("presentacion.NodoLibro")==0 && nodoSeleccionado.getIdentificativo().compareTo(nodoSeleccionEvento.getIdentificativo())==0 && SwingUtilities.isRightMouseButton((MouseEvent)componentesJPanel[16]) )
                                  { 
                                     nodoGeneroSeleccion = (DefaultMutableTreeNodeHeredada)nodoSeleccionado.getParent();
                                     nodoLibroSeleccion =  nodoSeleccionado ;                                
