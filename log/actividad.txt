@@ -83,3 +83,28 @@
 2022-05-05 14:33:20  usuario1          127.000.001.001       2  op_menu - Desconexion                                                                                         
 2022-05-05 14:33:20                    127.000.001.001       1  op_menu - Conexion                                                                                            
 2022-05-05 14:33:25                    127.000.001.001      31  op_menu - CierreVentana                                                                                       
+2022-05-06 21:31:27                    127.000.001.001       1  op_menu - Conexion                                                                                            
+2022-05-06 21:31:45                    127.000.001.001      31  op_menu - CierreVentana                                                                                       
+2022-05-06 21:31:52                    127.000.001.001       1  op_menu - Conexion                                                                                            
+2022-05-06 21:32:21                    127.000.001.001       3  autenticacion                                                                                                 
+2022-05-06 21:32:22  usuario1          127.000.001.001       5  op_menu - ConexionEfectuada                                                                                   
+2022-05-06 21:32:38  usuario1          127.000.001.001       8  op_menu - Vista Formulario                                                                                    
+2022-05-06 21:32:38  usuario1          127.000.001.001      16  actualizadoNumeroPaginas                                                                                      
+2022-05-06 21:33:21  usuario1          127.000.001.001      20  op_menu - Vista Unica Tabla                                                                                   
+2022-05-06 21:33:27  usuario1          127.000.001.001      27  op_menu - Vista Paginada Tabla                                                                                
+2022-05-06 21:33:33  usuario1          127.000.001.001      32  op_menu - Vista Arbol                                                                                         
+2022-05-06 21:33:34  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:35  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:36  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:36  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:37  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:38  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:40  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:42  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:43  usuario1          127.000.001.001      36  ratonClicked                                                                                                  
+2022-05-06 21:33:52  usuario1          127.000.001.001      18  op_menu - Estadisticas Actividad                                                                              
+2022-05-06 21:33:57  usuario1          127.000.001.001       6  op_menu - Volcado a BD                                                                                        
+2022-05-06 21:34:02  usuario1          127.000.001.001      38  op_menu - Configurar Documento                                                                                
+2022-05-06 21:34:16  usuario1          127.000.001.001       2  op_menu - Desconexion                                                                                         
+2022-05-06 21:34:16                    127.000.001.001       1  op_menu - Conexion                                                                                            
+2022-05-06 21:34:20                    127.000.001.001      31  op_menu - CierreVentana                                                                                       
