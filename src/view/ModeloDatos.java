@@ -18,8 +18,8 @@ import model.Libro;
 public class ModeloDatos extends AbstractTableModel {
     
      private Object datos[][];
-     private String[] nombreColumnas = {"Código","Título","Género","Fecha edición","Número páginas","Premiado"};
-     private Controller controller;
+     private final String[] nombreColumnas = {"Código","Título","Género","Fecha edición","Número páginas","Premiado"};
+     private final Controller controller;
      private int numeroFilas = 0;
      private Object copiaReservaDato;
      private int numeroFilasRecibidas = 5;
@@ -104,7 +104,7 @@ public class ModeloDatos extends AbstractTableModel {
         numeroFilasRecibidas = listaLibros.size();
         instanciarArrayDatos();
 
-        if (listaLibros.size() > 0)
+        if (!listaLibros.isEmpty())
         {  
            for (int i=0; i<listaLibros.size(); i++)
            { 
@@ -114,10 +114,7 @@ public class ModeloDatos extends AbstractTableModel {
                datos[i][2] = libro.getGenero()+"  -  "+libro.getDescripcion();
                datos[i][3] = new SimpleDateFormat("dd-MM-yyyy").format(libro.getFechaEdicion());
                datos[i][4] = libro.getNumeroPaginas(); 
-              if (libro.isPremiado())
-                   datos[i][5] = true;
-                 else
-                   datos[i][5] = false;
+               datos[i][5] = libro.isPremiado();
            }
         }
 
@@ -136,16 +133,19 @@ public class ModeloDatos extends AbstractTableModel {
     }
 
 
+    @Override
     public int getColumnCount() {
         return(datos[0].length );
     }
 
 
+    @Override
     public int getRowCount() {
         return(datos.length );
     }
 
 
+    @Override
     public Object getValueAt(int fila, int columna) {
        Object datoADevolver = null;
        if (fila >= 0  &&  fila <= numeroFilas-1)
@@ -156,6 +156,7 @@ public class ModeloDatos extends AbstractTableModel {
     }
 
 
+    @Override
     public void setValueAt(Object valor,int fila, int columna ) {  
          if (fila >= 0  &&  fila <= numeroFilas-1)
          {  copiaReservaDato = datos[fila][columna];
@@ -166,6 +167,7 @@ public class ModeloDatos extends AbstractTableModel {
       }
 
 
+    @Override
     public boolean isCellEditable(int fila, int columna ) {
         boolean editable = false;
 
@@ -182,11 +184,13 @@ public class ModeloDatos extends AbstractTableModel {
       }
 
 
+    @Override
     public String getColumnName(int columna) {
         return nombreColumnas[columna];
     }
 
 
+    @Override
     public Class getColumnClass(int columna) {
         Class classADevolver = null;
            try {

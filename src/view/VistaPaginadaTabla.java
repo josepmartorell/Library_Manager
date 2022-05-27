@@ -30,8 +30,8 @@ public class VistaPaginadaTabla extends PantallaOpcion {
        private ModeloDatos modeloDatos;
        private JTable jTable;
        private ListSelectionModel listSelectionModel;
-       private JButton[] botonesPaginacion = {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null};
-       private JLabel[] etiquetasPuntosSuspensivos = {null, null};
+       private final JButton[] botonesPaginacion = {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null};
+       private final JLabel[] etiquetasPuntosSuspensivos = {null, null};
        private ParametrosPaginacion parametrosPaginacion;
        private int numeroTotalPaginas = 0;
        
@@ -52,6 +52,7 @@ public class VistaPaginadaTabla extends PantallaOpcion {
     
 
     
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception {
         
         this.controller = controller;
@@ -135,7 +136,7 @@ public class VistaPaginadaTabla extends PantallaOpcion {
     private void instanciarBotonesPaginacion() {
  
        int numeroBotonesNumericos = ((ParametrosPaginacion)controller.getRepositorio()[4]).getNumeroBotonesNumericos();
-       int paginaActual = ((Integer)componentesJPanel[11]).intValue();      
+       int paginaActual = ((Integer)componentesJPanel[11]);      
       
        //  Eliminar de la Vista los botones de paginación de la visualización anterior
        for (int i=0; i<botonesPaginacion.length; i++) 
@@ -208,7 +209,7 @@ public class VistaPaginadaTabla extends PantallaOpcion {
            botonesPaginacion[contadorBotones] = new JButton();
            botonesPaginacion[contadorBotones].setBounds(50+(80*contadorBotones), 80+16*((ParametrosPaginacion)controller.getRepositorio()[4]).getNumeroFilasPagina(), 70, 50);
            botonesPaginacion[contadorBotones].setActionCommand("botonPaginacionNumerica");
-           botonesPaginacion[contadorBotones].setText(new Integer(i+1-1).toString());  
+           botonesPaginacion[contadorBotones].setText(Integer.toString(i+1-1));  
            add(botonesPaginacion[contadorBotones]);
            botonesPaginacion[contadorBotones].addActionListener(controller);                     
            contadorBotones++;    
@@ -229,7 +230,7 @@ public class VistaPaginadaTabla extends PantallaOpcion {
           botonesPaginacion[contadorBotones] = new JButton();
           botonesPaginacion[contadorBotones].setBounds(50+(80*contadorBotones), 80+16*((ParametrosPaginacion)controller.getRepositorio()[4]).getNumeroFilasPagina(), 70, 50);
           botonesPaginacion[contadorBotones].setActionCommand("botonPaginacionNumerica");
-          botonesPaginacion[contadorBotones].setText(new Integer(numeroTotalPaginas).toString());
+          botonesPaginacion[contadorBotones].setText(Integer.toString(numeroTotalPaginas));
           add(botonesPaginacion[contadorBotones]);            
           botonesPaginacion[contadorBotones].addActionListener(controller);    
           contadorBotones++;                                      
@@ -245,21 +246,23 @@ public class VistaPaginadaTabla extends PantallaOpcion {
           botonesPaginacion[contadorBotones].addActionListener(controller);                 
        }        
        
-       for (int i=0; i<botonesPaginacion.length; i++) 
-       {
-           if (botonesPaginacion[i] != null)
-              if (botonesPaginacion[i].getActionCommand().compareTo("botonPaginacionNumerica") == 0 )
-                  if (Integer.parseInt(botonesPaginacion[i].getText()) == paginaActual )
-                      botonesPaginacion[i].setForeground(java.awt.Color.LIGHT_GRAY);  
-       }     
+           for (JButton botonesPaginacion1 : botonesPaginacion) {
+               if (botonesPaginacion1 != null) {
+                   if (botonesPaginacion1.getActionCommand().compareTo("botonPaginacionNumerica") == 0) {
+                       if (Integer.parseInt(botonesPaginacion1.getText()) == paginaActual) {
+                           botonesPaginacion1.setForeground(java.awt.Color.LIGHT_GRAY);
+                       }
+                   }     
+               }
+           }
     }
     
     
     
     private int calcularNumeroPaginas(Integer numeroFilas, ParametrosPaginacion parametrosPaginacion) {
-        int numeroPaginas = numeroFilas.intValue() / parametrosPaginacion.getNumeroFilasPagina(); 
+        int numeroPaginas = numeroFilas / parametrosPaginacion.getNumeroFilasPagina(); 
         
-        if (numeroFilas.intValue() % parametrosPaginacion.getNumeroFilasPagina() > 0)
+        if (numeroFilas % parametrosPaginacion.getNumeroFilasPagina() > 0)
             numeroPaginas++;
         
         return numeroPaginas;
@@ -267,16 +270,18 @@ public class VistaPaginadaTabla extends PantallaOpcion {
     
     
     
+    @Override
     public void inicializarPantalla() throws Exception {      
 
-        parametrosPaginacion.setNumeroPagina(((Integer)componentesJPanel[11]).intValue());
-        modeloDatos.cargar(new LibrosNegocio().consultarPagina((BaseDatos)controller.getRepositorio()[0], ((Integer)componentesJPanel[10]).intValue(), parametrosPaginacion));
+        parametrosPaginacion.setNumeroPagina(((Integer)componentesJPanel[11]));
+        modeloDatos.cargar(new LibrosNegocio().consultarPagina((BaseDatos)controller.getRepositorio()[0], ((Integer)componentesJPanel[10]), parametrosPaginacion));
         numeroTotalPaginas = calcularNumeroPaginas(new LibrosNegocio().consultarNumeroFilas((BaseDatos)controller.getRepositorio()[0]), parametrosPaginacion);  // Es necesario tener en cuenta que actualizaciones realizadas por otras sesiones podrían repercutir en el número de filas de la tabla, y en consecuencia, en el número de páginas.
         instanciarBotonesPaginacion(); 
     }      
     
     
     
+    @Override
     public void responderAController(String actionCommand) throws Exception {
                 
         switch(actionCommand)

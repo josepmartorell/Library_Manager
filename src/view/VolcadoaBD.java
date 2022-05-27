@@ -30,12 +30,14 @@ public class VolcadoaBD extends PantallaOpcion {
     }   
     
 
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception {
         this.controller = controller;        
         jButtonVolcar.addActionListener(controller);        
     }    
     
     
+    @Override
     public void responderAController(String actionCommand) throws Exception {
           switch(actionCommand)
           {   

@@ -21,8 +21,8 @@ import model.Libro;
  */  
 public class ImpresorPagina extends Component implements Printable {
 
-    private Libro[] lineasPagina;
-    private int numeroPagina; 
+    private final Libro[] lineasPagina;
+    private final int numeroPagina; 
 
     public ImpresorPagina(Libro[] lineasPaginaTransferido, int numeroPagina) {     
 
@@ -33,6 +33,7 @@ public class ImpresorPagina extends Component implements Printable {
     }
 
 
+    @Override
     public int print(Graphics g, PageFormat pageFormat, int n) {       
        //     CABECERA DEL LISTADO        
        MediaTracker mediaTracker = new MediaTracker(this);
@@ -40,7 +41,7 @@ public class ImpresorPagina extends Component implements Printable {
        mediaTracker.addImage(image,0);
        try{ 
              mediaTracker.waitForAll();
-          } catch (Exception exception)
+          } catch (InterruptedException exception)
             { System.out.println("Error en metodo print de ImpresorPagina  "+exception.getMessage()); }
        g.drawImage(image, 70, 30, this); 
        g.setFont(new Font("TimesRoman", Font.PLAIN + Font.BOLD, 15));

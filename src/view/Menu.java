@@ -18,14 +18,13 @@ import javax.swing.JPanel;
  * @author jtech
  */
 public class Menu extends JFrame{
-       private Controller controller;
+       private final Controller controller;
        private JPanel jPanelPrincipal; 
-       private CardLayout cardLayout;
-       private JMenuBar jMenuBar = new JMenuBar();
-       private String[] opcionesMenu;
-       private String[][] opciones; 
-       private JMenu[] jMenus;
-       private JMenuItem[][] jMenuItems;      
+       private final JMenuBar jMenuBar = new JMenuBar();
+       private final String[] opcionesMenu;
+       private final String[][] opciones; 
+       private final JMenu[] jMenus;
+       private final JMenuItem[][] jMenuItems;      
       
     public Menu() {
         

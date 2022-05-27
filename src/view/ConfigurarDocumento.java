@@ -101,6 +101,7 @@ public class ConfigurarDocumento extends PantallaOpcion {
     }   
     
     
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception {
         
         this.controller = controller;    
@@ -124,9 +125,9 @@ public class ConfigurarDocumento extends PantallaOpcion {
         List<Libro> listaLibros = null;
         String[] listaGeneros = null;
         int numeroItems = 0;
-        if (((Integer)componentesJPanel[10]).intValue() != 3)    
+        if (((Integer)componentesJPanel[10]) != 3)    
             {                       
-               listaLibros = new LibrosNegocio().consultarTodos((BaseDatos)controller.getRepositorio()[0], ((Integer)componentesJPanel[10]).intValue(), null, null);
+               listaLibros = new LibrosNegocio().consultarTodos((BaseDatos)controller.getRepositorio()[0], ((Integer)componentesJPanel[10]), null, null);
                numeroItems = listaLibros.size();
             }
           else
@@ -201,7 +202,7 @@ public class ConfigurarDocumento extends PantallaOpcion {
                    break;                     
         }
               
-        listaLibros = new LibrosNegocio().consultarTodos((BaseDatos)controller.getRepositorio()[0], ((Integer)componentesJPanel[10]).intValue(), null, limitesListado);      
+        listaLibros = new LibrosNegocio().consultarTodos((BaseDatos)controller.getRepositorio()[0], ((Integer)componentesJPanel[10]), null, limitesListado);      
         
         return listaLibros;
     }  

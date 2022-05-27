@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class InvocacionAutomaticaMenu {
     
-    private List<ActionListener> listaListeners = new ArrayList();
+    private final List<ActionListener> listaListeners = new ArrayList();
 
     public InvocacionAutomaticaMenu() {
     }

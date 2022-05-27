@@ -127,6 +127,7 @@ public class VistaFormulario extends PantallaOpcion {
     }   
     
     
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception {
         
         this.controller = controller;
@@ -151,6 +152,7 @@ public class VistaFormulario extends PantallaOpcion {
     }
     
     
+    @Override
     public void inicializarPantalla() throws Exception {
         
         jTextFieldCodigo.setText("");
@@ -177,6 +179,7 @@ public class VistaFormulario extends PantallaOpcion {
     }    
     
     
+    @Override
     public void responderAController(String actionCommand) throws Exception {
         Libro libro;
         
