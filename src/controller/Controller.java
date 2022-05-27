@@ -185,7 +185,7 @@ public class Controller extends WindowAdapter implements ActionListener, TableMo
                       System.out.println("fila seleccionada en JTable  "+pantallaOpcion.getComponenteJPanel(2));
                   }
                   break;        
-          case "presentacion.VistaFormulario": 
+          case "view.VistaFormulario": 
                   if (e.getSource() == (pantallaOpcion.getComponenteJPanel(12)))
                     { 
                        centralizar("actualizadoGenero");               

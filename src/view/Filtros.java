@@ -90,11 +90,11 @@ public class Filtros {
         
        boolean existenDatosNulos = false;
        
-       for (int i=0; i<datosAFiltrar.length; i++) 
-       {
-          if (datosAFiltrar[i].compareTo("") == 0)
-              existenDatosNulos = true;
-       }
+        for (String datosAFiltrar1 : datosAFiltrar) {
+            if (datosAFiltrar1.compareTo("") == 0) {
+                existenDatosNulos = true;
+            }
+        }
         
       if (existenDatosNulos)
            throw new GenericaExcepcion(17);

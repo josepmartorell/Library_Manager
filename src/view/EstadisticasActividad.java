@@ -119,6 +119,7 @@ public class EstadisticasActividad extends PantallaOpcion {
         clipboard = getToolkit().getSystemClipboard();
     }   
 
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception {
         
         this.controller = controller;     

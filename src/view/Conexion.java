@@ -74,12 +74,14 @@ public class Conexion extends PantallaOpcion
     }
 
 
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception {
         this.controller = controller;      
         jPasswordFieldPassword.addActionListener(controller);
     }    
     
     
+    @Override
     public void responderAController(String actionCommand) throws Exception {
           switch(actionCommand)
           {   

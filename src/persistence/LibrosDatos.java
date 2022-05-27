@@ -93,7 +93,7 @@ public class LibrosDatos {
                    case 4: preparedStatement.setInt(1, (Integer)libro.getDatoActualizado());
                            break; 
                    case 5: byte premiado = 0;
-                           if (((Boolean)libro.getDatoActualizado()).booleanValue())
+                           if (((Boolean)libro.getDatoActualizado()))
                                premiado = 1;  
                            preparedStatement.setByte(1, premiado);                         
                            break;                        

@@ -105,6 +105,7 @@ public class EdicionNodo extends PantallaOpcion {
     }   
     
 
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception {
         
         this.controller = controller;
@@ -170,6 +171,7 @@ public class EdicionNodo extends PantallaOpcion {
     }       
  
  
+    @Override
     public void responderAController(String actionCommand) throws Exception {
         
         switch(actionCommand)

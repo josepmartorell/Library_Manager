@@ -17,11 +17,13 @@ public class NodoGenero extends DefaultMutableTreeNodeHeredada {
      super(cadenaVisualizada);
    }  
 
+    @Override
   public void setIdentificativo(String identificativo)
    {
      this.identificativo = identificativo;
    }
 
+  @Override
   public String getIdentificativo()
    {
      return identificativo;

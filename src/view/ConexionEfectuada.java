@@ -30,12 +30,14 @@ public class ConexionEfectuada extends PantallaOpcion {
     }   
     
 
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception { 
         this.controller = controller;
         jLabelUsuarioConectado.setText("Está conectado como usuario "+controller.getUsuarioAutenticado().getIdentificadorUsuario());
     }    
     
     
+    @Override
     public void responderAController(String actionCommand) throws Exception {
     }    
 }

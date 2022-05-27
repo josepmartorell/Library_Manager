@@ -173,7 +173,7 @@ public class VistaUnicaTabla extends PantallaOpcion{
        @Override
     public void inicializarPantalla() throws Exception {      
        activarDesactivarJButtonInsercionFila(new boolean[]{true, false, false, true}); 
-       modeloDatos.cargar(new LibrosNegocio().consultarTodos((BaseDatos)controller.getRepositorio()[0], ((Integer)componentesJPanel[10]).intValue(), null, null));   
+       modeloDatos.cargar(new LibrosNegocio().consultarTodos((BaseDatos)controller.getRepositorio()[0], ((Integer)componentesJPanel[10]), null, null));   
     }    
 
    
@@ -203,7 +203,7 @@ public class VistaUnicaTabla extends PantallaOpcion{
                     break;           
              case "cancelarInsercionFila" :                                                                 
                     modeloDatos.eliminarFilaInsertada();        
-                    listSelectionModel.removeSelectionInterval(((Integer)componentesJPanel[2]), ((Integer)componentesJPanel[2]).intValue());
+                    listSelectionModel.removeSelectionInterval(((Integer)componentesJPanel[2]), ((Integer)componentesJPanel[2]));
                     componentesJPanel[2] = -1;                        // Modifica valor de fila seleccionada en JTable
                     filaAInsertarJTable = -1;                                       
                     activarDesactivarJButtonInsercionFila(new boolean[]{true, false, false, true});
@@ -217,7 +217,7 @@ public class VistaUnicaTabla extends PantallaOpcion{
                                                             }                         
                                              );
                     Filtros.filtrarFecha((String) modeloDatos.getDatos()[filaAInsertarJTable][3]);
-                    Filtros.filtrarNumeroPaginasLibro(((Integer)modeloDatos.getDatos()[filaAInsertarJTable][4]).intValue());                         
+                    Filtros.filtrarNumeroPaginasLibro(((Integer)modeloDatos.getDatos()[filaAInsertarJTable][4]));                         
                     libro = new Libro();
                     libro.setTitulo((String)(modeloDatos.getDatos()[filaAInsertarJTable][1]));
                     libro.setGenero(((String)(modeloDatos.getDatos()[filaAInsertarJTable][2])).substring(0, 1));
@@ -225,45 +225,45 @@ public class VistaUnicaTabla extends PantallaOpcion{
                                                                  ((String)(modeloDatos.getDatos()[filaAInsertarJTable][3])).substring(3, 5) +"-"+
                                                                  ((String)(modeloDatos.getDatos()[filaAInsertarJTable][3])).substring(0, 2)
                                                                ));
-                    libro.setNumeroPaginas(((Integer)(modeloDatos.getDatos()[filaAInsertarJTable][4])).intValue());
-                    libro.setPremiado(((Boolean)(modeloDatos.getDatos()[filaAInsertarJTable][5])).booleanValue());                                     
+                    libro.setNumeroPaginas(((Integer)(modeloDatos.getDatos()[filaAInsertarJTable][4])));
+                    libro.setPremiado(((Boolean)(modeloDatos.getDatos()[filaAInsertarJTable][5])));                                     
                     new LibrosNegocio().insertar((BaseDatos)controller.getRepositorio()[0], libro);   
                     inicializarPantalla();
-                    listSelectionModel.removeSelectionInterval(((Integer)componentesJPanel[2]).intValue(), ((Integer)componentesJPanel[2]).intValue());                          
-                    componentesJPanel[2] = new Integer(-1);                        // Modifica valor de fila seleccionada en JTable
+                    listSelectionModel.removeSelectionInterval(((Integer)componentesJPanel[2]), ((Integer)componentesJPanel[2]));                          
+                    componentesJPanel[2] = -1;                        // Modifica valor de fila seleccionada en JTable
                     filaAInsertarJTable = -1;                                                      
                     activarDesactivarJButtonInsercionFila(new boolean[]{true, false, false, true});  
                     jLabelInformaFilaInsertada.setText("                                     ");
                     jLabelInformaGuardarFilaInsertada.setText("                                                                              ");                                                                                                                  
                     break;  
              case "eliminarFilaSeleccionada" :
-                    if (((Integer)componentesJPanel[2]).intValue() != -1)    
+                    if (((Integer)componentesJPanel[2]) != -1)    
                     {  
                         libro = new Libro();
-                        libro.setIdLibro((String)modeloDatos.getDatos()[((Integer)componentesJPanel[2]).intValue()][0]);
+                        libro.setIdLibro((String)modeloDatos.getDatos()[((Integer)componentesJPanel[2])][0]);
                         new LibrosNegocio().eliminar((BaseDatos)controller.getRepositorio()[0], libro);
                         inicializarPantalla();
-                        listSelectionModel.removeSelectionInterval(((Integer)componentesJPanel[2]).intValue(), ((Integer)componentesJPanel[2]).intValue());                                                             
-                        componentesJPanel[2] = new Integer(-1);
+                        listSelectionModel.removeSelectionInterval(((Integer)componentesJPanel[2]), ((Integer)componentesJPanel[2]));                                                             
+                        componentesJPanel[2] = -1;
                     }
                     break;      
              case "actualizadaColumnaJTable" :System.out.println("vamos al filtro");
-                    if (((Integer)componentesJPanel[14]).intValue() == 3)
-                       Filtros.filtrarFecha((String) modeloDatos.getDatos()[((Integer)componentesJPanel[13]).intValue()][((Integer)componentesJPanel[14]).intValue()]);
+                    if (((Integer)componentesJPanel[14]) == 3)
+                       Filtros.filtrarFecha((String) modeloDatos.getDatos()[((Integer)componentesJPanel[13])][((Integer)componentesJPanel[14])]);
 
-                    if (((Integer)componentesJPanel[14]).intValue() == 4)
-                       Filtros.filtrarNumeroPaginasLibro(((Integer)modeloDatos.getDatos()[((Integer)componentesJPanel[13]).intValue()][((Integer)componentesJPanel[14]).intValue()]).intValue());
+                    if (((Integer)componentesJPanel[14]) == 4)
+                       Filtros.filtrarNumeroPaginasLibro(((Integer)modeloDatos.getDatos()[((Integer)componentesJPanel[13])][((Integer)componentesJPanel[14])]));
                     
-                    if (((String)modeloDatos.getDatos()[((Integer)componentesJPanel[13]).intValue()][0]).compareTo("") != 0)
+                    if (((String)modeloDatos.getDatos()[((Integer)componentesJPanel[13])][0]).compareTo("") != 0)
                     {
                         libro = new Libro();
-                        libro.setIdLibro((String)modeloDatos.getDatos()[((Integer)componentesJPanel[13]).intValue()][0]);
+                        libro.setIdLibro((String)modeloDatos.getDatos()[((Integer)componentesJPanel[13])][0]);
                         
-                        if (((Integer)componentesJPanel[14]).intValue() == 2)
-                             libro.setDatoActualizado(((String)modeloDatos.getDatos()[((Integer)componentesJPanel[13]).intValue()][((Integer)componentesJPanel[14]).intValue()]).substring(0, 1));
+                        if (((Integer)componentesJPanel[14]) == 2)
+                             libro.setDatoActualizado(((String)modeloDatos.getDatos()[((Integer)componentesJPanel[13])][((Integer)componentesJPanel[14])]).substring(0, 1));
                           else
-                             libro.setDatoActualizado(modeloDatos.getDatos()[((Integer)componentesJPanel[13]).intValue()][((Integer)componentesJPanel[14]).intValue()]);
-                        libro.setColumnaActualizada(((Integer)componentesJPanel[14]).intValue());
+                             libro.setDatoActualizado(modeloDatos.getDatos()[((Integer)componentesJPanel[13])][((Integer)componentesJPanel[14])]);
+                        libro.setColumnaActualizada(((Integer)componentesJPanel[14]));
                                   
                         new LibrosNegocio().actualizar((BaseDatos)controller.getRepositorio()[0], libro, -1);       
                     }

@@ -112,3 +112,6 @@
 2022-04-21 16:25:52  usuario1          127.000.001.001       0  view.ConfigurarDocumento                                                                                      
 2022-04-21 16:36:49  usuario1          127.000.001.001       0  null                                                                                                          
 2022-04-21 16:40:06  usuario1          127.000.001.001       0  null                                                                                                          
+2022-05-21 19:59:49                    127.000.001.001      25  Se ha producido una situación de error como consecuencia de problemas con la conexión a la BD                 
+2022-05-21 19:59:53                    127.000.001.001       0  null                                                                                                          
+2022-05-21 19:59:57                    127.000.001.001       0  null                                                                                                          

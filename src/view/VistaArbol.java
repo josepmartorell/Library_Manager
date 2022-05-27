@@ -71,6 +71,7 @@ public class VistaArbol extends PantallaOpcion {
     }   
     
 
+    @Override
     public void inicializarPostInstanciar(Controller controller) throws Exception {
         
         this.controller = controller;        
@@ -113,21 +114,20 @@ public class VistaArbol extends PantallaOpcion {
         while ( modelo.getChildCount(raiz) > 0 )
            modelo.removeNodeFromParent((DefaultMutableTreeNode)modelo.getChild(raiz,0));
 
-        generos = new LibrosNegocio().consultarGeneros((BaseDatos)controller.getRepositorio()[0]);
-       for ( int i=0 ; i<generos.length ; i++)
-          {
-            NodoGenero nodoGenero = new NodoGenero( generos[i] );
-            nodoGenero.setIdentificativo(generos[i]);
-            modelo.insertNodeInto( nodoGenero, raiz, modelo.getChildCount(raiz) );
-            List<Libro> listaLibros = new LibrosNegocio().consultarTodos((BaseDatos)controller.getRepositorio()[0], 2, generos[i].substring(0, 1), null);
-            for (int k=0; k<listaLibros.size(); k++)
-            {
-               Libro libro = listaLibros.get(k);
-               NodoLibro nodoLibro = new NodoLibro(libro.getIdLibro()+" - "+libro.getTitulo());
-               nodoLibro.setIdentificativo(libro.getIdLibro());
-               nodoLibro.setTitulo(libro.getTitulo());
-               nodoGenero.add(nodoLibro);
-            }
+          generos = new LibrosNegocio().consultarGeneros((BaseDatos)controller.getRepositorio()[0]);
+          for (String genero : generos) {
+              NodoGenero nodoGenero = new NodoGenero(genero);
+              nodoGenero.setIdentificativo(genero);
+              modelo.insertNodeInto( nodoGenero, raiz, modelo.getChildCount(raiz) );
+              List<Libro> listaLibros = new LibrosNegocio().consultarTodos((BaseDatos)controller.getRepositorio()[0], 2, genero.substring(0, 1), null);
+              for (int k=0; k<listaLibros.size(); k++)
+              {
+                  Libro libro = listaLibros.get(k);
+                  NodoLibro nodoLibro = new NodoLibro(libro.getIdLibro()+" - "+libro.getTitulo());
+                  nodoLibro.setIdentificativo(libro.getIdLibro());
+                  nodoLibro.setTitulo(libro.getTitulo());
+                  nodoGenero.add(nodoLibro);
+              }
           }
     }
 
@@ -170,6 +170,7 @@ public class VistaArbol extends PantallaOpcion {
     }
     
     
+    @Override
     public void responderAController(String actionCommand) throws Exception {
           switch(actionCommand)
           {   
